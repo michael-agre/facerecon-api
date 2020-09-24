@@ -25,9 +25,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (req, res) => {
-	db.select('*').from('users').then(user => { res.json(user) })
-})
+app.get('/', (req, res) => { res.send('Root is working!')})
 
 app.post('/signin', (req, res) => { signIn.handleSignIn(req, res, db, bcrypt) })
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
