@@ -35,6 +35,6 @@ app.get('/profile/:id', (req, res) => { profileId.handleProfileId(req, res, db) 
 app.put('/image', (req, res) => { image.handleImage(req, res, db) })
 app.post('/imageUrl', (req, res) => { image.handleApiCall(req, res) })
 
-app.listen(process.env.port || 2000, () => {
+app.listen(process.env.PORT || 2000, () => {
 	console.log(`App Launched on Port ${process.env.PORT}`)
 })
