@@ -10,7 +10,7 @@ const profileId = require('./controllers/profileId');
 const db = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
+    host : 'postgresql-elliptical-35736',
     user : 'postgres',
     password : 'postgres_test',
     database : 'face_recon'
